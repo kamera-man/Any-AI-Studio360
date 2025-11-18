@@ -1,8 +1,14 @@
 # Studio 360° - Xcode Setup Instructions
 
+## Overview
+
+This guide shows you how to **open the existing Xcode project** that's included in this repository.
+
+> **Want to create a new Xcode project instead?** See **CREATE-NEW-XCODE-PROJECT.md** for instructions on creating a fresh project and importing the source code.
+
 ## Quick Start Guide
 
-Follow these steps to open and run the Studio 360° iOS app in Xcode.
+Follow these steps to open and run the Studio 360° iOS app in Xcode using the existing project.
 
 ### Prerequisites
 

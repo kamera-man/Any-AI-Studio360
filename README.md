@@ -32,7 +32,18 @@ A modern, family-centered photo and video management iOS application that celebr
 
 ## 🚀 Getting Started
 
-### Installation
+### Choose Your Setup Method
+
+**Option 1: Use Existing Project** (Recommended)
+- Quick and easy - just open and run
+- See **XCODE-SETUP.md** for detailed instructions
+
+**Option 2: Create New Project**
+- Start fresh with your own Xcode project
+- Import source files manually
+- See **CREATE-NEW-XCODE-PROJECT.md** for step-by-step guide
+
+### Quick Start (Option 1)
 
 1. **Clone the repository**
    ```bash
@@ -48,7 +59,7 @@ A modern, family-centered photo and video management iOS application that celebr
 3. **Build and Run**
    - Select your target device or simulator
    - Press `⌘R` or click the Run button
-   - The app will compile and launch
+   - The app will compile and launch with sample data
 
 ### Project Structure
 
