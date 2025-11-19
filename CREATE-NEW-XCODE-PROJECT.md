@@ -2,6 +2,29 @@
 
 This guide shows you how to create a **brand new** Xcode project and import the Studio 360° source code, rather than using the existing `.xcodeproj` file.
 
+## ⚠️ Important: Locate Your Repository First
+
+Before following this guide, you need to know where you cloned the repository on your computer.
+
+**The source files are located at**: `[YOUR_REPO_PATH]/Any-AI-Studio360/Studio360/Studio360/`
+
+**Common locations:**
+- `~/Any-AI-Studio360/Studio360/Studio360/` (cloned to home directory)
+- `~/GitHub/Any-AI-Studio360/Studio360/Studio360/` (cloned to GitHub folder)
+- `~/Documents/Any-AI-Studio360/Studio360/Studio360/` (cloned to Documents)
+
+**To find it, open Terminal and run:**
+```bash
+# Find the repository location
+find ~ -name "Any-AI-Studio360" -type d 2>/dev/null | head -1
+
+# Or navigate to where you cloned it
+cd ~/GitHub/Any-AI-Studio360  # (adjust path as needed)
+ls -la Studio360/Studio360/   # You should see: App, Models, ViewModels, Views, Services, Resources
+```
+
+Throughout this guide, replace `[YOUR_REPO_PATH]` with your actual path.
+
 ## Why Create a New Project?
 
 You might want to create a new Xcode project if you:
@@ -65,29 +88,57 @@ You might want to create a new Xcode project if you:
    - `Services`
    - `Resources`
 
-### Step 3: Import Source Files
+### Step 3: Locate the Source Files in Your Repository
 
-Now we'll copy the source files from the repository:
+**Important**: First, find where you cloned the repository. The source files are located in the `Studio360/Studio360/` subdirectory within your cloned repository.
+
+**Example locations:**
+- If you cloned to your home directory: `~/Any-AI-Studio360/Studio360/Studio360/`
+- If you cloned to GitHub folder: `~/GitHub/Any-AI-Studio360/Studio360/Studio360/`
+- If you cloned elsewhere: `[YOUR_PATH]/Any-AI-Studio360/Studio360/Studio360/`
+
+**To find your repository location:**
+```bash
+# If you're not sure where you cloned it, search for it:
+find ~ -name "Any-AI-Studio360" -type d 2>/dev/null | head -1
+```
+
+Once you know your repository location, the source files are in:
+```
+[YOUR_REPO_PATH]/Any-AI-Studio360/
+└── Studio360/
+    └── Studio360/  ← Source files are here
+        ├── App/
+        ├── Models/
+        ├── ViewModels/
+        ├── Views/
+        ├── Services/
+        └── Resources/
+```
+
+### Step 4: Import Source Files
+
+Now we'll copy the source files from your repository location.
+
+**Note**: In the instructions below, replace `[YOUR_REPO_PATH]` with your actual repository path (e.g., `~/GitHub/Any-AI-Studio360` or wherever you cloned it).
 
 #### A. Copy App Files
 
-1. Navigate to the repository folder: `Any-AI-Studio360/Studio360/Studio360/App/`
-
-2. **Import Studio360App.swift**:
+1. **Import Studio360App.swift**:
    - Right-click on `App` group in Xcode
    - Select `Add Files to "Studio360"...`
-   - Navigate to `Any-AI-Studio360/Studio360/Studio360/App/`
+   - Navigate to `[YOUR_REPO_PATH]/Any-AI-Studio360/Studio360/Studio360/App/`
    - Select `Studio360App.swift`
    - Make sure **"Copy items if needed"** is checked
    - Make sure target is selected
    - Click **Add**
 
-3. **Import ContentView.swift**:
-   - Repeat the process for `ContentView.swift`
+2. **Import ContentView.swift**:
+   - Repeat the process for `ContentView.swift` from the same folder
 
 #### B. Copy Model Files
 
-From `Any-AI-Studio360/Studio360/Studio360/Models/`:
+From `[YOUR_REPO_PATH]/Any-AI-Studio360/Studio360/Studio360/Models/`:
 
 1. Add to `Models` group:
    - `Photo.swift`
@@ -96,7 +147,7 @@ From `Any-AI-Studio360/Studio360/Studio360/Models/`:
 
 #### C. Copy ViewModel Files
 
-From `Any-AI-Studio360/Studio360/Studio360/ViewModels/`:
+From `[YOUR_REPO_PATH]/Any-AI-Studio360/Studio360/Studio360/ViewModels/`:
 
 1. Add to `ViewModels` group:
    - `PhotoLibraryViewModel.swift`
@@ -104,7 +155,7 @@ From `Any-AI-Studio360/Studio360/Studio360/ViewModels/`:
 
 #### D. Copy Service Files
 
-From `Any-AI-Studio360/Studio360/Studio360/Services/`:
+From `[YOUR_REPO_PATH]/Any-AI-Studio360/Studio360/Studio360/Services/`:
 
 1. Add to `Services` group:
    - `PhotoService.swift`
@@ -112,7 +163,7 @@ From `Any-AI-Studio360/Studio360/Studio360/Services/`:
 
 #### E. Copy View Files
 
-From `Any-AI-Studio360/Studio360/Studio360/Views/`:
+From `[YOUR_REPO_PATH]/Any-AI-Studio360/Studio360/Studio360/Views/`:
 
 1. Add to `Views/Home` group:
    - `HomeView.swift`
@@ -131,7 +182,7 @@ From `Any-AI-Studio360/Studio360/Studio360/Views/`:
 #### F. Copy Resources
 
 1. **Assets**:
-   - Copy the entire `Assets.xcassets` folder from `Any-AI-Studio360/Studio360/Studio360/Resources/`
+   - Copy the entire `Assets.xcassets` folder from `[YOUR_REPO_PATH]/Any-AI-Studio360/Studio360/Studio360/Resources/`
    - Drag it into the `Resources` group in Xcode
    - Make sure "Copy items if needed" is checked
 
@@ -182,7 +233,7 @@ If you want to include the test suite:
 
 3. **Add Test Files**:
    
-   From `Any-AI-Studio360/Studio360Tests/`:
+   From `[YOUR_REPO_PATH]/Any-AI-Studio360/Studio360Tests/`:
    - `PhotoTests.swift`
    - `AlbumTests.swift`
    - `FamilyMemberTests.swift`
@@ -244,7 +295,7 @@ If you want to import all files at once:
 1. **Create the folder structure** as described in Step 2
 
 2. **Select all source files** from the repository:
-   - In Finder, navigate to `Any-AI-Studio360/Studio360/Studio360/`
+   - In Finder, navigate to `[YOUR_REPO_PATH]/Any-AI-Studio360/Studio360/Studio360/`
    - Select all folders (App, Models, ViewModels, Views, Services, Resources)
 
 3. **Drag into Xcode**:
